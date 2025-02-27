@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_app_background">
+        <com.feb.lib_common.view.CustomTopBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/custom_top_bar"/>
+        <com.angcyo.tablayout.DslTabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:clipChildren="false"
+            android:layout_marginHorizontal="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="35dp"
+            app:tab_deselect_color="#C7C4CC"
+            app:tab_indicator_gravity="GRAVITY_START"
+            app:tab_indicator_height="3dp"
+            app:tab_indicator_width="60dp"
+            app:tab_select_color="@color/color_white"
+            app:tab_text_max_size="20sp"
+            app:tab_text_min_size="20sp" />
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tablayout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

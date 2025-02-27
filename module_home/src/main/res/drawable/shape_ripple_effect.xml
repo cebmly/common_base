@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:left="0dp" android:right="0dp" android:top="0dp" android:bottom="0dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <corners android:radius="50dp" />
+        </shape>
+    </item>
+
+    <!-- Wave 1 -->
+    <item>
+        <shape>
+            <solid android:color="#997A2E38" />
+            <corners android:radius="50dp" />
+            <size android:width="80dp" android:height="80dp" />
+        </shape>
+    </item>
+
+    <!-- Wave 2 -->
+    <item>
+        <shape>
+            <solid android:color="#80692729" />
+            <corners android:radius="50dp" />
+            <size android:width="160dp" android:height="160dp" />
+        </shape>
+    </item>
+
+    <!-- Wave 3 -->
+    <item>
+        <shape>
+            <solid android:color="#337A2E38" />
+            <corners android:radius="50dp" />
+            <size android:width="240dp" android:height="240dp" />
+        </shape>
+    </item>
+</layer-list>

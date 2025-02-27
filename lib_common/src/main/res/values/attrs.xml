@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomTopBar">
+        <attr name="TopBarTitle" format="string" />
+        <attr name="TopBarThemeColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="CommonEmptyView">
+        <attr name="emptyImageRes" format="integer" />
+        <attr name="emptyText" format="string" />
+    </declare-styleable>
+    <declare-styleable name="ScanTextLayout">
+        <attr name="scanTextSize" format="dimension" />
+        <attr name="scanTextColor" format="color" />
+        <attr name="scanTextBold" format="boolean" />
+    </declare-styleable>
+</resources>

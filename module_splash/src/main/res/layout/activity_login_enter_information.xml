@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="@mipmap/splash_ic_login_rectangle_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="375:812"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.feb.lib_common.view.CustomTopBar
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="110dp"
+            android:layout_height="120dp"
+            android:background="@drawable/splash_sp_fff_r99"
+            app:layout_constraintBottom_toBottomOf="@id/iv_avatar"
+            app:layout_constraintEnd_toEndOf="@id/iv_avatar"
+            app:layout_constraintStart_toStartOf="@id/iv_avatar"
+            app:layout_constraintTop_toTopOf="@id/iv_avatar" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="45dp"
+            app:riv_oval="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/splash_ic_up_avatar_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top_bar" />
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@mipmap/splash_ic_login_camera"
+            app:layout_constraintBottom_toBottomOf="@id/iv_avatar"
+            app:layout_constraintEnd_toEndOf="@id/iv_avatar"
+            app:layout_constraintStart_toEndOf="@id/iv_avatar"
+            app:layout_constraintTop_toTopOf="@id/iv_avatar" />
+
+        <ImageView
+            android:id="@+id/iv_nickname_icon"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="150dp"
+            android:src="@mipmap/splash_ic_login_nickname"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_avatar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:lineHeight="22dp"
+            android:text="Nickname"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_nickname_icon"
+            app:layout_constraintStart_toEndOf="@id/iv_nickname_icon"
+            app:layout_constraintTop_toTopOf="@id/iv_nickname_icon" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_enter_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="18sp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/splash_sp_fff_r30_b2"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/iv_nickname_icon">
+            <EditText
+                android:id="@+id/ed_login_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:text="Enter username"
+                android:layout_marginHorizontal="26dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/iv_birthday_icon"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="34dp"
+            android:src="@mipmap/splash_ic_login_birthday"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_enter_nickname" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:lineHeight="22dp"
+            android:text="Birthday"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_birthday_icon"
+            app:layout_constraintStart_toEndOf="@id/iv_birthday_icon"
+            app:layout_constraintTop_toTopOf="@id/iv_birthday_icon" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_enter_birthday"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="18sp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/splash_sp_fff_r30_b2"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/iv_birthday_icon">
+            <TextView
+                android:id="@+id/tv_login_birthday"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:text="Enter birthday"
+                android:layout_marginHorizontal="26dp"/>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/splash_ic_login_select_birthday"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="22dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/splash_sp_submit_btn"
+            android:layout_marginHorizontal="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="50dp"
+            android:text="Done"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:gravity="center"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

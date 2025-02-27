@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.angcyo.tablayout.DslTabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:clipChildren="false"
+            android:layout_marginHorizontal="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tab_deselect_color="#EB6300"
+            app:tab_enable_text_bold="true"
+            android:layout_marginTop="40dp"
+            app:tab_indicator_drawable="@mipmap/home_title_bottom_icon"
+            app:tab_indicator_gravity="GRAVITY_START"
+            app:tab_indicator_height="3dp"
+            app:tab_indicator_width="60dp"
+            app:tab_select_color="#EB6300"
+            app:tab_text_max_size="22sp"
+            app:tab_text_min_size="18sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#80FFFFFF"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tablayout"
+            android:id="@+id/view_top_line"/>
+        <com.angcyo.tablayout.DslTabLayout
+            android:id="@+id/tablayout2"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:clipChildren="false"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tab_deselect_color="#EB6300"
+            app:tab_enable_text_bold="true"
+            app:tab_indicator_drawable="@mipmap/home_title_bottom_icon"
+            app:tab_indicator_gravity="GRAVITY_START"
+            app:layout_constraintTop_toBottomOf="@id/view_top_line"
+            app:tab_indicator_height="3dp"
+            app:tab_indicator_width="20dp"
+            app:tab_select_color="#EB6300"
+            app:tab_text_max_size="16sp"
+            app:tab_text_min_size="16sp" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tablayout2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="375:812"
+            android:src="@mipmap/splash_ic_login_background"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/splash_sp_fff_r30"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginHorizontal="18sp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toTopOf="@id/cl_login_google">
+            <ImageView
+                android:id="@+id/iv_logo_quick"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="12dp"
+                android:src="@mipmap/splash_ic_logo_quick"
+                app:layout_constraintEnd_toStartOf="@id/tv_logo_quick"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_logo_quick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Use Quick Login"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:drawablePadding="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textStyle="bold"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_login_google"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/splash_sp_fff_r30"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginHorizontal="18sp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@id/iv_login_phone">
+            <ImageView
+                android:id="@+id/iv_logo_google"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="12dp"
+                android:src="@mipmap/splash_ic_logo_google"
+                app:layout_constraintEnd_toStartOf="@id/tv_logo_google"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_logo_google"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login with Google"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:drawablePadding="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textStyle="bold"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@mipmap/splash_ic_login_phone"
+            app:layout_constraintBottom_toTopOf="@id/tv_agreement"
+            android:layout_marginBottom="62dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/iv_login_phone"/>
+
+        <TextView
+            android:id="@+id/tv_agreement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="34dp"
+            android:text="By signing up or logging in, you accept our
+Terms of service and Privacy Policy"
+            android:textSize="11sp"
+            android:textColor="@color/white"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

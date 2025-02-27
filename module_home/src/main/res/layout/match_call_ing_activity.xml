@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_app_background">
+        <ImageView
+            android:id="@+id/rippleView"
+            android:layout_width="match_parent"
+            android:layout_height="348dp"
+            android:layout_marginHorizontal="14dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/match_ic_scan_call"
+            app:layout_constraintBottom_toTopOf="@id/cl_stop_march"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Searching ..."
+            android:textSize="24sp"
+            android:textColor="#FEFEFE"
+            app:layout_constraintStart_toStartOf="@id/rippleView"
+            app:layout_constraintEnd_toEndOf="@id/rippleView"
+            app:layout_constraintTop_toBottomOf="@id/rippleView"
+            android:textStyle="bold"
+            android:layout_marginTop="17dp"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_stop_march"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="@drawable/match_stop_match_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <TextView
+                android:id="@+id/tv_stop_match"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Stop match"
+                android:textColor="@color/color_white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginHorizontal="18dp"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:background="@drawable/splash_sp_submit_btn"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

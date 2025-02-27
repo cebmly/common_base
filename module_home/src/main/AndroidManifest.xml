@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <activity android:name=".HomeDetailActivity"
+            android:exported="true"/>
+        <activity android:name=".find.FindPostUpdatesActivity"
+            android:exported="true"/>
+        <activity android:name=".call.MakeAndReceiveCallActivity"
+            android:exported="true"/>
+        <activity android:name=".mine.HomePageMomentActivity"
+            android:exported="true"/>
+        <activity android:name=".mine.FollowActivity"
+            android:exported="true"/>
+        <activity android:name=".mine.MineVisitorActivity"
+            android:exported="true"/>
+        <activity android:name=".mine.MineSettingActivity"
+            android:exported="true"/>
+        <activity android:name=".mine.MineBlackListActivity"
+            android:exported="true"/>
+        <activity android:name=".mine.MineVipPageActivity"
+            android:exported="true"/>
+        <activity android:name=".match.MatchScanCallActivity"
+            android:exported="true"/>
+    </application>
+
+</manifest>

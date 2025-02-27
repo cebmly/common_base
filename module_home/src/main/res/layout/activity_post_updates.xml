@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_app_background">
+        <com.feb.lib_common.view.CustomTopBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/custom_bar"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_input_count"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/custom_bar"
+            android:background="@drawable/shape_r10_fffe5d"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="@dimen/dp_10"
+            >
+            <EditText
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/et_content"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginHorizontal="12dp"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="Share your thoughts......"
+                android:maxLength="500"
+                android:minHeight="165dp"
+                android:textColor="@color/color_252525"
+                android:textColorHint="#344054"
+                android:textSize="@dimen/sp_14" />
+            <TextView
+                android:id="@+id/tv_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="@dimen/dp_10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="0/200"
+                android:textColor="@color/color_text_name"
+                android:textSize="11sp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cl_input_count"
+            app:layout_constraintStart_toStartOf="@id/cl_input_count"
+            app:layout_constraintEnd_toEndOf="@id/cl_input_count"
+            android:layout_marginTop="24dp"
+            tools:itemCount="9"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3"
+            tools:listitem="@layout/find_add_photo_item"
+            android:id="@+id/rv_add_photo"/>
+
+        <TextView
+            android:id="@+id/tv_submit_post"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/splash_sp_submit_btn"
+            android:layout_marginHorizontal="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="50dp"
+            android:text="Post"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:gravity="center"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

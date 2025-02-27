@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:layout_width="wrap_content">
+            <solid android:color="@color/white" />
+        </shape>
+    </item>
+    <item>
+        <bitmap
+            android:gravity="fill"
+            android:src="@drawable/image_splash_content" />
+    </item>
+</layer-list>

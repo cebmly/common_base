@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_app_background"
+        android:paddingBottom="100dp"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/rippleView"
+            android:layout_width="match_parent"
+            android:layout_height="348dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginHorizontal="14dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/match_ic_scan_call"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_free"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:background="@mipmap/match_ic_scan_free"
+            app:layout_constraintBottom_toTopOf="@id/ll_random"
+            app:layout_constraintStart_toStartOf="@id/ll_random"
+            app:layout_constraintEnd_toEndOf="@id/ll_random">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Free"
+                android:textColor="@color/color_white"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="33dp"
+            android:layout_height="27dp"
+            android:background="@mipmap/match_ic_scan_free_coupon"
+            app:layout_constraintEnd_toEndOf="@id/ll_free"
+            app:layout_constraintBottom_toTopOf="@id/ll_free"
+            app:layout_constraintTop_toTopOf="@id/ll_free">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="3"
+                android:textColor="@color/color_white"
+                android:textSize="14sp"
+                android:gravity="center_horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="6dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_random"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:gravity="center_horizontal"
+            android:paddingVertical="8dp"
+            android:background="@drawable/shape_match_call_bg"
+            app:layout_constraintTop_toBottomOf="@id/rippleView"
+            app:layout_constraintStart_toStartOf="parent"
+            android:orientation="vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="100dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Random "
+                android:textSize="12sp"
+                android:textColor="#4ADEFF"/>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:drawablePadding="2dp"
+                    android:drawableEnd="@mipmap/common_ic_call_gold"
+                    android:textColor="#4ADEFF"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/ match"
+                    android:layout_marginStart="2dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/color_white"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:gravity="center_horizontal"
+            android:paddingVertical="8dp"
+            android:background="@drawable/shape_match_call_bg"
+            app:layout_constraintTop_toBottomOf="@id/rippleView"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="100dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Goddess"
+                android:drawablePadding="2dp"
+                android:drawableStart="@mipmap/match_ic_scan_goddess"
+                android:textSize="12sp"
+                android:textColor="#FFFA88"/>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:drawablePadding="2dp"
+                    android:drawableEnd="@mipmap/common_ic_call_gold"
+                    android:textColor="#FFFA88"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/ match"
+                    android:textSize="12sp"
+                    android:layout_marginStart="2dp"
+                    android:textColor="@color/color_white"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</layout>
